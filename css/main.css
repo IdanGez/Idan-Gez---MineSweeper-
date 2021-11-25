@@ -1,0 +1,126 @@
+body {
+    background-image: url(https://wallpaperaccess.com/download/purple-galaxy-439817);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+table {
+    border-color: rgb(39, 39, 59);
+    color:rgb(255, 255, 255);
+    font-size: 35px;
+    margin: auto;
+    background: rgb(100,25,116);
+    background: -moz-linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
+    background: -webkit-linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
+    background: linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: none;
+}
+
+td {
+    padding: 0;
+    width:60px; 
+    height:60px;
+    text-align: center;
+    border: 5px outset rgb(100,25,116);
+    outline: 4px outset rgb(218,204,220)
+}
+
+.isshown {
+    padding: 0;
+    width:60px; 
+    height:60px;
+    text-align: center;
+    background-color: rgb(253, 253, 253);
+    color:rgb(100,25,116);
+}
+
+h1 {
+    color: #FFFFFF;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #FFFFFF;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #FFFFFF;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.lives {
+    color: #FFFFFF;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 60px;
+}
+
+h4 span {
+    height: 60px;
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 50px;
+    background: rgb(100,25,116);
+    background: -moz-linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
+    background: -webkit-linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
+    background: linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
+}
+ 
+h4 button{
+    height: 55px;
+    font-size: 35px;
+    padding-top: 2.5px;
+}
+
+button {
+    box-shadow: -8px 13px 7px -2px #4f2b4f;
+	background:linear-gradient(to bottom, #a824d4 5%, #17212e 100%);
+	background-color:#a824d4;
+	border-radius:15px;
+	border:2px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#e6e6e6;
+	font-family:Verdana;
+	font-weight:bold;
+	padding:9px 20px;
+	text-decoration:none;
+	text-shadow:4px -2px 0px #020d29;
+    font-size: 30px;
+}
+
+button:hover {
+    background:linear-gradient(to bottom, #17212e 5%, #a824d4 100%);
+	background-color:#17212e;
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}
+
+        

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Mine Sweeper</title>
+</head>
+
+<body onload="initGame()" oncontextmenu="return false;">
+    <div>
+<h1>  Sprint 1 - Space-Mine-Sweeper  </h1>
+<h2 class="timer"> Game Time: <span id="seconds">00</span></h2>
+<h3> Choose Difficulty
+    <button onclick="difficulty(this)">Easy</button>
+    <button onclick="difficulty(this)">Hard</button>
+    <button onclick="difficulty(this)">Extreme</button></h3>
+
+<h4 class="lives">Lives Count: <span></span><button onclick="restart(this)">😅</button></h4>
+    </div>
+    <table> 
+          <tbody> 
+
+        </tbody>
+    </table>
+
+    <script src="js/idanutil.js"> </script>
+    <script src="js/main.js"> </script>
+</body>
+
+</html>
