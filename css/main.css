@@ -14,7 +14,7 @@ table {
     background: -moz-linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
     background: -webkit-linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
     background: linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 20px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-weight: 700;
@@ -40,6 +40,10 @@ td {
     text-align: center;
     background-color: rgb(253, 253, 253);
     color:rgb(100,25,116);
+}
+
+.safe {
+    background-color: rgb(135, 253, 234);
 }
 
 h1 {
@@ -84,7 +88,7 @@ h4 span {
     text-align: center;
     margin-left: 25px;
     margin-right: 50px;
-    background: rgb(100,25,116);
+    background: rgb(100,25,116); 
     background: -moz-linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
     background: -webkit-linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
     background: linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
@@ -95,7 +99,24 @@ h4 button{
     font-size: 35px;
     padding-top: 2.5px;
 }
+.restart {
+    height: 55px;
+    font-size: 35px;
+    padding-top: 2.5px;
+    margin:auto;
+  }
 
+.hints {
+    height: 60px;
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 50px;
+    background:0;
+    /* background: -moz-linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
+    background: -webkit-linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);
+    background: linear-gradient(45deg, rgb(100,25,116) 0%, rgb(218,204,220) 33%, rgb(89,27,118) 100%);  */
+    /* text-shadow: 0px; */
+}
 button {
     box-shadow: -8px 13px 7px -2px #4f2b4f;
 	background:linear-gradient(to bottom, #a824d4 5%, #17212e 100%);

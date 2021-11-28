@@ -20,6 +20,7 @@ var gInterval;
 var gFirstClick = 0;
 var gVictoryCounter;
 var gLivesCount = 3;
+var gHintCounter = 3;
 
 function initGame() {
     gVariableRestarter()
@@ -34,6 +35,8 @@ function gVariableRestarter() {
     gseconds = 0;
     gFirstClick = 0;
     gGame.isOn = true;
+    gHintCounter = 3;
+
 }
 
 function setMinesNegsCount(gBoard) {
@@ -77,8 +80,8 @@ function renderBoard(board) {
                 if (currCell.minesAroundCount === 0 && !currCell.isMine) cellCont = '';
             }
             else cellCont = '';
-            strHTML += `<td oncontextmenu="cellMarked(this,${i},${j}); return false;" class="cell ${className} ${currCell.isShown ? "isshown" : ''}" 
-            data-i="${i}" data-j="${j}"
+            strHTML += `<td oncontextmenu="cellMarked(this,${i},${j}); return false;" class="cell ${className} ${currCell.isShown ? "isshown" : ''}
+            "data-i="${i}" data-j="${j}"
             onclick="cellClicked(this,${i},${j})">
             ${cellCont}`;
             strHTML += '</td>';
@@ -133,7 +136,7 @@ function CheckGameOver(i, j) {
         }
     }
     if (gVictoryCounter === gLevel.SIZE ** 2) {
-        document.querySelector('h4 button').innerText = '😎'
+        document.querySelector('.restart').innerText = '😎'
         gGame.isOn = false;
         clearInterval(gInterval)
     }
@@ -158,23 +161,25 @@ function difficulty(elBtn) {
     if (elBtn.innerText === 'Easy') {
         gLevel.SIZE = 4;
         gLevel.MINES = 2;
-        document.querySelector('h4 button').innerText = '😅';
+        document.querySelector('.restart').innerText = '😅';
     }
     else if (elBtn.innerText === 'Hard') {
         gLevel.SIZE = 8;
         gLevel.MINES = 12;
-        document.querySelector('h4 button').innerText = '😅';
+        document.querySelector('.restart').innerText = '😅';
     }
     else if (elBtn.innerText === 'Extreme') {
         gLevel.SIZE = 12;
         gLevel.MINES = 30;
+        document.querySelector('.restart').innerText = '😅';
+
     }
     initGame()
 }
 
 function restart(elBtn) {
-    document.querySelector('h4 button').innerText = '😅'
-    document.querySelector('h4 span').innerHTML = 'Lives Count:' + LIVE_IMG + ' ' + LIVE_IMG + ' ' + LIVE_IMG;
+    document.querySelector('.restart').innerText = '😅'
+    document.querySelector('.hints').innerText = 'Hints: 💡💡💡'
     initGame()
 }
 
@@ -205,7 +210,7 @@ function remainingLives() {
     }
     else {
         gGame.isOn = false;
-        document.querySelector('h4 button').innerText = '🤯'
+        document.querySelector('.restart').innerText = '🤯'
         for (var i = 0; i < gBoard.length; i++) {
             for (var j = 0; j < gBoard[0].length; j++) {
                 if (gBoard[i][j].isMine) gBoard[i][j].isShown = true;
@@ -215,4 +220,41 @@ function remainingLives() {
         clearInterval(gInterval)
     }
 
+}
+
+function safeClick(elBtn) {
+    if (gHintCounter > 0) {
+        if (gFirstClick === 0) {
+            alert('First click is always safe, go for it ! :)')
+
+        } else
+            var safeClicks = [];
+        for (var i = 0; i < gBoard.length; i++) {
+            for (var j = 0; j < gBoard[0].length; j++) {
+                if (gBoard[i][j].isMine === false && gBoard[i][j].isShown === false) {
+                    safeClicks.push(gBoard[i][j])
+                }
+            }
+        }
+        var safeClick = safeClicks[getRandomIntInclusive(0, safeClicks.length - 1)];
+        var elSafeClick = document.querySelector(`[data-i="${safeClick.cellI}"][data-j="${safeClick.cellJ}"]`);
+        elSafeClick.classList.add("safe");
+        setTimeout(function () {
+            removeSafe(elSafeClick);
+        }, 2000);
+        gHintCounter--
+        if (gHintCounter === 2) {
+            document.querySelector('.hints').innerText = 'Hints: 💡💡';
+        }
+        else if (gHintCounter === 1) {
+            document.querySelector('.hints').innerText = 'Hints: 💡';
+        }
+        else
+            document.querySelector('.hints').innerText = 'Hints: ';
+    }
+
+}
+
+function removeSafe(elSafeClick) {
+    elSafeClick.classList.remove("safe");
 }
